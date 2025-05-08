@@ -1,0 +1,40 @@
+{
+  "kind": "collectionType",
+  "collectionName": "newses",
+  "info": {
+    "singularName": "news",
+    "pluralName": "newses",
+    "displayName": "新闻中心",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "news_title": {
+      "type": "string"
+    },
+    "news_cover": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "news_content": {
+      "type": "richtext"
+    },
+    "type": {
+      "type": "string",
+      "required": true,
+      "regex": "^\\s*(公司新闻|行业新闻)\\s*$"
+    },
+    "author": {
+      "type": "string"
+    }
+  }
+}

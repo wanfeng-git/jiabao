@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_shared_products_technologies",
+  "info": {
+    "displayName": "products_technologies"
+  },
+  "options": {},
+  "attributes": {
+    "products_image": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "products_title": {
+      "type": "string"
+    },
+    "products_detailed": {
+      "type": "text"
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_shared_company_profiles",
+  "info": {
+    "displayName": "company_profile"
+  },
+  "options": {},
+  "attributes": {
+    "introduce": {
+      "type": "text"
+    },
+    "introduce_image": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    }
+  }
+}

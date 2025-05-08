@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_shared_scales",
+  "info": {
+    "displayName": "scale"
+  },
+  "options": {},
+  "attributes": {
+    "infrastructure": {
+      "type": "string"
+    },
+    "people_equipment": {
+      "type": "string"
+    }
+  }
+}
