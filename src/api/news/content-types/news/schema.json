@@ -35,6 +35,19 @@
     },
     "author": {
       "type": "string"
+    },
+    "source": {
+      "type": "string"
+    },
+    "attachment": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": true
     }
   }
 }
