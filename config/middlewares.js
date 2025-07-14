@@ -10,9 +10,12 @@ module.exports = [
   {
     name: 'strapi::cors',
     config: {
-      origin: process.env.NODE_ENV === 'production'
-          ? ['https://your-domain.com']
-          : ['http://localhost:*', 'http://127.0.0.1:*'],
+      origin: [
+        'http://localhost:3002',       // 精确开发地址
+        'http://localhost:3000',
+        'http://127.0.0.1:3002',       // 备用本地地址
+        'https://your-domain.com'       // 生产地址
+      ],
       methods: ['GET', 'POST', 'PUT', 'PATCH', 'DELETE'],
       headers: ['Content-Type', 'Authorization']
     }
