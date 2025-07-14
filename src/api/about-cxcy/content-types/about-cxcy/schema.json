@@ -1,0 +1,32 @@
+{
+  "kind": "collectionType",
+  "collectionName": "about_cxcies",
+  "info": {
+    "singularName": "about-cxcy",
+    "pluralName": "about-cxcies",
+    "displayName": "创新创业",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "category": {
+      "type": "string"
+    },
+    "file": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "description": {
+      "type": "richtext"
+    }
+  }
+}

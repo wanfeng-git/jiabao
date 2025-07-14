@@ -1,0 +1,75 @@
+{
+  "kind": "collectionType",
+  "collectionName": "about_uses",
+  "info": {
+    "singularName": "about-us",
+    "pluralName": "about-uses",
+    "displayName": "关于我们",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "slide": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "title_choose": {
+      "type": "string"
+    },
+    "People_Equipment": {
+      "type": "string"
+    },
+    "about_us": {
+      "type": "text"
+    },
+    "company_factory": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "introduces": {
+      "displayName": "company_profile",
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.company-profile"
+    },
+    "scale": {
+      "displayName": "scale",
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.scale"
+    },
+    "scale_image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "products_technologies": {
+      "displayName": "products_technologies",
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.products-technologies"
+    }
+  }
+}
