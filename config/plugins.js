@@ -1,4 +1,4 @@
-module.exports = ({env}) => ({
+module.exports = () => ({
   upload: {
     config: {
       provider: 'local',
@@ -13,8 +13,8 @@ module.exports = ({env}) => ({
         small: 500,
         xsmall: 64
       },
-      // Sharp 配置
-      sharp: {
+      // Sharp 配置 - 如果 Sharp 安装失败，可以禁用图片处理
+      sharp: process.env.STRAPI_DISABLE_IMAGE_PROCESSING === 'true' ? false : {
         quality: 80,
         progressive: true,
         withoutEnlargement: true

@@ -15,6 +15,12 @@ console.log('🔧 开始修复 Sharp 安装问题...');
 process.env.SHARP_IGNORE_GLOBAL_LIBVIPS = '1';
 process.env.SHARP_BINARY_HOST = 'https://github.com/lovell/sharp-libvips/releases/download/';
 process.env.SHARP_LIBVIPS_BINARY_HOST = 'https://github.com/lovell/sharp-libvips/releases/download/';
+process.env.SHARP_PLATFORM = 'linux';
+process.env.SHARP_ARCH = 'x64';
+process.env.SHARP_LIBC = 'glibc';
+process.env.npm_config_target_platform = 'linux';
+process.env.npm_config_target_arch = 'x64';
+process.env.npm_config_target_libc = 'glibc';
 
 try {
   // 检查是否已安装 Sharp
@@ -45,13 +51,19 @@ try {
 
   // 重新安装 Sharp
   console.log('📦 重新安装 Sharp...');
-  execSync('npm install sharp@^0.32.6 --platform=linux --arch=x64', {
+  execSync('npm install sharp@^0.32.6', {
     stdio: 'inherit',
     env: {
       ...process.env,
       SHARP_IGNORE_GLOBAL_LIBVIPS: '1',
+      SHARP_PLATFORM: 'linux',
+      SHARP_ARCH: 'x64',
+      SHARP_LIBC: 'glibc',
       npm_config_sharp_binary_host: 'https://github.com/lovell/sharp-libvips/releases/download/',
-      npm_config_sharp_libvips_binary_host: 'https://github.com/lovell/sharp-libvips/releases/download/'
+      npm_config_sharp_libvips_binary_host: 'https://github.com/lovell/sharp-libvips/releases/download/',
+      npm_config_target_platform: 'linux',
+      npm_config_target_arch: 'x64',
+      npm_config_target_libc: 'glibc'
     }
   });
 

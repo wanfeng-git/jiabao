@@ -1,14 +1,14 @@
-# 使用官方 Node.js 镜像
-FROM node:22-alpine
+# 使用 Debian 基础镜像而不是 Alpine，避免 musl 问题
+FROM node:22-slim
 
 # 安装必要的系统依赖，包括 Sharp 所需的库
-RUN apk add --no-cache \
-    vips-dev \
-    build-base \
+RUN apt-get update && apt-get install -y \
+    libvips-dev \
+    build-essential \
     python3 \
     make \
     g++ \
-    libc6-compat
+    && rm -rf /var/lib/apt/lists/*
 
 # 设置工作目录
 WORKDIR /opt/app
@@ -20,6 +20,9 @@ COPY .npmrc ./
 # 设置环境变量
 ENV NODE_ENV=production
 ENV SHARP_IGNORE_GLOBAL_LIBVIPS=1
+ENV SHARP_PLATFORM=linux
+ENV SHARP_ARCH=x64
+ENV SHARP_LIBC=glibc
 
 # 安装依赖
 RUN npm ci --only=production
