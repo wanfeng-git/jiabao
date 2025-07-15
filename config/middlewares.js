@@ -14,7 +14,7 @@ module.exports = [
         'http://localhost:3002',       // 精确开发地址
         'http://localhost:3000',
         'http://127.0.0.1:3002',       // 备用本地地址
-        'https://8.148.217.190'       // 生产地址
+        'http://8.148.217.190'       // 生产地址
       ],
       methods: ['GET', 'POST', 'PUT', 'PATCH', 'DELETE'],
       headers: ['Content-Type', 'Authorization']
