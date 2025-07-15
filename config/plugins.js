@@ -4,6 +4,20 @@ module.exports = ({env}) => ({
       provider: 'local',
       providerOptions: {
         sizeLimit: 10 * 1024 * 1024 // 10MB
+      },
+      // 图片处理配置
+      breakpoints: {
+        xlarge: 1920,
+        large: 1000,
+        medium: 750,
+        small: 500,
+        xsmall: 64
+      },
+      // Sharp 配置
+      sharp: {
+        quality: 80,
+        progressive: true,
+        withoutEnlargement: true
       }
     }
   },

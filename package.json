@@ -13,7 +13,10 @@
     "start": "strapi start",
     "strapi": "strapi",
     "upgrade": "npx @strapi/upgrade latest",
-    "upgrade:dry": "npx @strapi/upgrade latest --dry"
+    "upgrade:dry": "npx @strapi/upgrade latest --dry",
+    "fix-sharp": "node ./scripts/fix-sharp.js",
+    "test-sharp": "node ./scripts/test-sharp.js",
+    "postinstall": "node ./scripts/fix-sharp.js || true"
   },
   "dependencies": {
     "@strapi/plugin-cloud": "5.12.0",
@@ -29,11 +32,15 @@
     "react-dom": "^18.0.0",
     "react-router-dom": "^6.0.0",
     "rxjs": "7.8.0",
+    "sharp": "^0.32.6",
     "styled-components": "^6.0.0"
   },
   "engines": {
     "node": "22.x",
     "npm": ">=6.0.0"
+  },
+  "overrides": {
+    "sharp": "^0.32.6"
   },
   "strapi-uuid": "494040b6-a60d-478f-8f7c-1e68779f799d"
 }
